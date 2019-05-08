@@ -6,7 +6,7 @@ class Home extends Component{
     render(){
         return(
             <div>
-                <h2>Welcome to Domiciliar Care</h2>
+                <h2>Welcome to Domiciliary Care</h2>
                 <Link to='/admin'><Button variant='contained' color='primary'>Signin</Button></Link>
             </div>
         )
