@@ -2,6 +2,9 @@ import React, {Component} from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import AdminClient from '../components/AdminClient'
+import AdminCarer from '../components/AdminCarer'
+import AdminSupervisor from '../components/AdminSupervisor'
+import AdminManager from '../components/AdminManager'
 
 class Admin extends Component{
     render(){
@@ -11,7 +14,7 @@ class Admin extends Component{
                 <Header 
                     title="Administrator" 
                     menu={['Client','Carer', 'Supervisor', 'Manager']}
-                    pages={[AdminClient]}/>
+                    pages={[<AdminClient />,<AdminCarer />, <AdminSupervisor />, <AdminManager />]}/>
                 <Footer />
             </div>
         )

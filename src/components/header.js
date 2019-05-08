@@ -7,7 +7,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
+//import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -82,7 +82,7 @@ class Header extends Component{
     
     state = {
         open: false,
-        mainContent: 'Default'
+        mainContent: this.props.pages[0]
       };
     
       handleDrawerOpen = () => {
@@ -95,31 +95,31 @@ class Header extends Component{
 
       sideMenu = (e) =>{
         let menu = e.target.innerHTML;
-        //console.log(menu === 'Manager'||menu === 'Carer'||menu === 'Supervisor')
+        
         switch(menu){
             case this.props.menu[0]:
                 this.setState({
-                    mainContent: 'Client'
+                    mainContent: this.props.pages[0]
                 })
-                console.log(this.props.pages[0])
+                //console.log(this.props.menu[0])
                 break;
             case this.props.menu[1]:
                 this.setState({
-                    mainContent: 'Carer'
+                    mainContent: this.props.pages[1]
                 })
-                //console.log(menu)
+                //console.log(this.props.menu[1])
                 break;
             case this.props.menu[2]:
                 this.setState({
-                    mainContent: 'Supervisor'
+                    mainContent: this.props.pages[2]
                 })
-                //console.log(menu)
+                //console.log(this.props.menu[2])
                 break;
             case this.props.menu[3]:
                 this.setState({
-                    mainContent: 'Manager'
+                    mainContent: this.props.pages[3]
                 })
-                //console.log(menu)
+                //console.log(this.props.menu[3])
                 break;
             default:
                 this.setState({mainContent: this.props.menu[0]})
@@ -150,9 +150,7 @@ class Header extends Component{
                     >
                     <MenuIcon />
                     </IconButton>
-                    <Typography variant="h6" color="inherit" noWrap>
-                        {this.props.title}
-                    </Typography>
+                    {this.props.title}
                 </Toolbar>
                 </AppBar>
                 <Drawer
@@ -195,20 +193,8 @@ class Header extends Component{
                 })}
                 >
                     <div className={classes.drawerHeader} />
-                    {this.state.mainContent}
+                    {this.state.mainContent}                 
                     
-                    <Typography paragraph>
-                        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla
-                        facilisi etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac
-                        tincidunt. Ornare suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat
-                        consequat mauris. Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus
-                        sed vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra accumsan in.
-                        In hendrerit gravida rutrum quisque non tellus orci ac. Pellentesque nec nam aliquam sem
-                        et tortor. Habitant morbi tristique senectus et. Adipiscing elit duis tristique
-                        sollicitudin nibh sit. Ornare aenean euismod elementum nisi quis eleifend. Commodo
-                        viverra maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin aliquam
-                        ultrices sagittis orci a.
-                    </Typography>
                 </main>
             </div>            
         )
