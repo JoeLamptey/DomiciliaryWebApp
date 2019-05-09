@@ -6,11 +6,14 @@ import AdminCarer from '../components/AdminCarer'
 import AdminSupervisor from '../components/AdminSupervisor'
 import AdminManager from '../components/AdminManager'
 
+import '../styles/index.css'
+
+
 class Admin extends Component{
     render(){
         return(
             <div>
-                <h1>Admin Page</h1>
+                <h1 >Admin Page</h1>
                 <Header 
                     title="ADMINISTRATOR" 
                     menu={['Client','Carer', 'Supervisor', 'Manager']}

@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
 import Typography from '@material-ui/core/Typography';
 
+import AdminStyles from './AdminClient.module.css'
+
 class AdminClient extends Component{
     render(){
         return(
-            <div>
-                <h1>AdminClient Page</h1>                
+            <div >
+                <h1 className={AdminStyles.header}>AdminClient Page</h1>                
                 <Typography paragraph>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent

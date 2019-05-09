@@ -141,17 +141,18 @@ class Header extends Component{
                     [classes.appBarShift]: open,
                 })}
                 >
-                <Toolbar disableGutters={!open}>
-                    <IconButton
-                    color="inherit"
-                    aria-label="Open drawer"
-                    onClick={this.handleDrawerOpen}
-                    className={classNames(classes.menuButton, open && classes.hide)}
-                    >
-                    <MenuIcon />
-                    </IconButton>
-                    {this.props.title}
-                </Toolbar>
+                    <Toolbar disableGutters={!open}>
+                        <IconButton
+                            color="inherit"
+                            aria-label="Open drawer"
+                            onClick={this.handleDrawerOpen}
+                            className={classNames(classes.menuButton, open && classes.hide)}
+                            >
+                            <MenuIcon />
+                        </IconButton>
+                        {this.props.title}
+                    </Toolbar>
+                    
                 </AppBar>
                 <Drawer
                     className={classes.drawer}
@@ -164,6 +165,7 @@ class Header extends Component{
                 >
 
                     <div className={classes.drawerHeader}>
+                        <h2>Domiciliary</h2>
                         <IconButton onClick={this.handleDrawerClose}>
                         {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                         </IconButton>
@@ -188,10 +190,10 @@ class Header extends Component{
                     </List>
                 </Drawer>
                 <main
-                className={classNames(classes.content, {
-                    [classes.contentShift]: open,
-                })}
-                >
+                    className={classNames(classes.content, {
+                        [classes.contentShift]: open,
+                    })}>
+
                     <div className={classes.drawerHeader} />
                     {this.state.mainContent}                 
                     
