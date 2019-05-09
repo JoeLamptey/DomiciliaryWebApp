@@ -11,7 +11,7 @@ class Supervisor extends Component{
         return(
             <div>
                 <Header 
-                    title='Supervisor' 
+                    title='SUPERVISOR' 
                     menu={['Clients','Carers', 'Monitoring', 'Reports' ]}
                     pages={[<SupervisorClient />, 
                         <SupervisorCarer />, 

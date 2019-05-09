@@ -12,7 +12,7 @@ class Admin extends Component{
             <div>
                 <h1>Admin Page</h1>
                 <Header 
-                    title="Administrator" 
+                    title="ADMINISTRATOR" 
                     menu={['Client','Carer', 'Supervisor', 'Manager']}
                     pages={[<AdminClient />,<AdminCarer />, <AdminSupervisor />, <AdminManager />]}/>
                 <Footer />
