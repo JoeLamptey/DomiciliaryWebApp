@@ -94,8 +94,8 @@ class Header extends Component{
       }
 
       sideMenu = (e) =>{
-        let menu = e.target.innerHTML;
-        
+        let menu = e.currentTarget.dataset.list_item;
+        //console.log(e.currentTarget.dataset.list_item)
         switch(menu){
             case this.props.menu[0]:
                 this.setState({
@@ -171,7 +171,7 @@ class Header extends Component{
                     <Divider />
                     <List>
                         {this.props.menu.map((text, index) => (
-                        <ListItem button key={text} onClick={this.sideMenu}>
+                        <ListItem button key={text} data-list_item={text} onClick={this.sideMenu}>
                             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
                             <ListItemText primary={text} />
                         </ListItem>
@@ -181,7 +181,7 @@ class Header extends Component{
                     <List>
                         {['Schedules', 'Profile', 'Logout'].map((text, index) => (
                         <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                            {/* <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon> */}
                             <ListItemText primary={text} />
                         </ListItem>
                         ))}
