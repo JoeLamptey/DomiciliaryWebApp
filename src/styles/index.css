@@ -3,5 +3,11 @@ color: red
 }
 
 h2{
-    color: blue;
+    color: white;
+}
+
+body{
+    background-image: url('../images/ad6.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
